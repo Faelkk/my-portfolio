@@ -2,9 +2,9 @@ import { useWindowWidth } from "../../App/hooks/useWindowWidth";
 
 import logoIcon from "../../assets/android-chrome-512x512_1.svg";
 import NavigationHeader from "./Components/NavigationHeader/NavigationHeader";
-import DropdownMenu from "./Components/DropdownMenu/DropdownMenu";
 import { HamburgerMenuIcon } from "@radix-ui/react-icons";
 import useHeader from "./useHeader";
+import Modal from "../Components/Modal";
 
 const Header = () => {
   const {
@@ -37,10 +37,19 @@ const Header = () => {
               <HamburgerMenuIcon className="w-6 h-6" />
             </button>
 
-            <DropdownMenu
+            <Modal
+              classNameOverlay="fixed inset-0 flex"
+              classNameContent="  fixed top-0 w-full h-[50%] rounded-[6px] bg-slate-100 p-[25px] shadow-[hsl(206_22%_7%_/_35%)_0px_10px_38px_-10px,_hsl(206_22%_7%_/_20%)_0px_10px_20px_-15px]"
               open={isVisibleDropDownMenu}
               onClose={handleCloseDropdownMenu}
-            />
+            >
+              <NavigationHeader
+                ClassNameUL="flex flex-col gap-2"
+                ClassNameNav="flex h-full w-full justify-center items-center"
+                classNameLI="text-2xl font-bold"
+                onClickNavigate={handleCloseDropdownMenu}
+              />
+            </Modal>
           </>
         )}
       </div>
