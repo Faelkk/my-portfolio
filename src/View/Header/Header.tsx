@@ -3,15 +3,12 @@ import { useWindowWidth } from "../../App/hooks/useWindowWidth";
 import logoIcon from "../../assets/android-chrome-512x512_1.svg";
 import NavigationHeader from "./Components/NavigationHeader/NavigationHeader";
 import { HamburgerMenuIcon } from "@radix-ui/react-icons";
-import useHeader from "./useHeader";
-import Modal from "../Components/Modal";
+
+import Modal from "../Components/modal/Modal";
+import useModal from "../Components/modal/useModal";
 
 const Header = () => {
-  const {
-    isVisibleDropDownMenu,
-    handleOpenDropdownMenu,
-    handleCloseDropdownMenu,
-  } = useHeader();
+  const { isVisibleModal, handleOpenModal, handleCloseModal } = useModal();
   const { width } = useWindowWidth();
 
   return (
@@ -33,21 +30,20 @@ const Header = () => {
           <NavigationHeader ClassNameUL="flex gap-6 mr-4 2xl:text-[1.3rem]" />
         ) : (
           <>
-            <button onClick={handleOpenDropdownMenu}>
+            <button onClick={handleOpenModal}>
               <HamburgerMenuIcon className="w-6 h-6" />
             </button>
 
             <Modal
-              classNameOverlay="fixed inset-0 flex"
               classNameContent="  fixed top-0 w-full h-[50%] rounded-[6px] bg-slate-100 p-[25px] shadow-[hsl(206_22%_7%_/_35%)_0px_10px_38px_-10px,_hsl(206_22%_7%_/_20%)_0px_10px_20px_-15px]"
-              open={isVisibleDropDownMenu}
-              onClose={handleCloseDropdownMenu}
+              open={isVisibleModal}
+              onClose={handleCloseModal}
             >
               <NavigationHeader
                 ClassNameUL="flex flex-col gap-2"
                 ClassNameNav="flex h-full w-full justify-center items-center"
                 classNameLI="text-2xl font-bold"
-                onClickNavigate={handleCloseDropdownMenu}
+                onClickNavigate={handleCloseModal}
               />
             </Modal>
           </>

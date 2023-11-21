@@ -2,6 +2,7 @@ import * as Dialog from "@radix-ui/react-dialog";
 import { Cross2Icon } from "@radix-ui/react-icons";
 
 import { ReactNode } from "react";
+import { cn } from "../../../App/utils/cn";
 
 interface ModalProps {
   open: boolean;
@@ -20,7 +21,7 @@ const Modal = ({
 }: ModalProps) => (
   <Dialog.Root open={open}>
     <Dialog.Portal>
-      <Dialog.Overlay className={classNameOverlay} />
+      <Dialog.Overlay className={cn("fixed inset-0 ", classNameOverlay)} />
       <Dialog.Content className={classNameContent}>
         <Dialog.Close asChild>
           <button
