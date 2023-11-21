@@ -2,7 +2,7 @@ import imgCoding from "../../assets/Hand coding-bro.svg";
 
 const About = () => {
   return (
-    <section className="flex  justify-center items-center mt-20 " id="#">
+    <section className="flex  justify-center items-center mt-20 " id="about">
       <section className="flex  md:justify-between items-center w-[90%] ">
         <div className="hidden   md:w-[50%] md:max-w-[50%] md:h-full lg:flex   ">
           <img

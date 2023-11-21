@@ -5,7 +5,7 @@ const Contact = () => {
   const { handleSubmit } = useContact();
 
   return (
-    <section className="flex justify-center items-center my-20">
+    <section className="flex justify-center items-center my-20" id="contact">
       <section className="grid  md:grid-cols-2 w-[90%] gap-5">
         <div className="flex flex-col gap-5 bg-[#eee] rounded-md p-5">
           <h2 className="font-bold text-3xl">Entre em contato Comigo</h2>

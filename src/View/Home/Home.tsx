@@ -3,7 +3,7 @@ import homeImage from "../../assets/Coding-bro.svg";
 
 const Home = () => {
   return (
-    <main className="flex justify-center items-center mt-6">
+    <main className="flex justify-center items-center mt-6" id="inicio">
       <div className="flex flex-col-reverse items-center w-full md:w-[90%] md:justify-between md:flex-row ">
         <div className="flex flex-col  md:w-[50%]">
           <div className="flex flex-col gap-3 w-full items-center  md:items-start">

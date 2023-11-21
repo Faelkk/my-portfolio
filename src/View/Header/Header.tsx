@@ -1,10 +1,17 @@
 import { useWindowWidth } from "../../App/hooks/useWindowWidth";
 
 import logoIcon from "../../assets/android-chrome-512x512_1.svg";
-import NavigationHeader from "./Components/NavigationHeader";
-import DropdownMenu from "./Components/DropdownMenu";
+import NavigationHeader from "./Components/NavigationHeader/NavigationHeader";
+import DropdownMenu from "./Components/DropdownMenu/DropdownMenu";
+import { HamburgerMenuIcon } from "@radix-ui/react-icons";
+import useHeader from "./useHeader";
 
 const Header = () => {
+  const {
+    isVisibleDropDownMenu,
+    handleOpenDropdownMenu,
+    handleCloseDropdownMenu,
+  } = useHeader();
   const { width } = useWindowWidth();
 
   return (
@@ -26,7 +33,14 @@ const Header = () => {
           <NavigationHeader ClassNameUL="flex gap-6 mr-4 2xl:text-[1.3rem]" />
         ) : (
           <>
-            <DropdownMenu />
+            <button onClick={handleOpenDropdownMenu}>
+              <HamburgerMenuIcon className="w-6 h-6" />
+            </button>
+
+            <DropdownMenu
+              open={isVisibleDropDownMenu}
+              onClose={handleCloseDropdownMenu}
+            />
           </>
         )}
       </div>

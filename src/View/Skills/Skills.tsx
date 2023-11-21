@@ -2,7 +2,7 @@ import { skillsIcon } from "../../App/mocks/images";
 
 const Skills = () => {
   return (
-    <section className="mt-20 flex justify-center">
+    <section className="mt-20 flex justify-center" id="skills">
       <section className="flex flex-col items-center md:gap-10  md:flex-row w-[90%]">
         <div className="flex  md:w-[50%]">
           <div className="flex items-center flex-col">
