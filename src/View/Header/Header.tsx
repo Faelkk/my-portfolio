@@ -4,8 +4,8 @@ import logoIcon from "../../assets/android-chrome-512x512_1.svg";
 import NavigationHeader from "./Components/NavigationHeader/NavigationHeader";
 import { HamburgerMenuIcon } from "@radix-ui/react-icons";
 
-import Modal from "../Components/modal/Modal";
-import useModal from "../Components/modal/useModal";
+import Modal from "../Components/Modal/Modal";
+import useModal from "../Components/Modal/useModal";
 
 const Header = () => {
   const { isVisibleModal, handleOpenModal, handleCloseModal } = useModal();

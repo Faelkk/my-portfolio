@@ -1,5 +1,5 @@
-import Modal from "../Components/modal/Modal";
-import useModal from "../Components/modal/useModal";
+import Modal from "../Components/Modal/Modal";
+import useModal from "../Components/Modal/useModal";
 import homeImage from "../../assets/Coding-bro.svg";
 
 import { projects } from "../../App/mocks/projects";

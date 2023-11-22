@@ -1,8 +1,11 @@
 import { GitHubLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
 import useContact from "./useContact";
+import Input from "../Components/Input/Input";
+import Textarea from "../Components/Textarea/Textarea";
+import { Controller } from "react-hook-form";
 
 const Contact = () => {
-  const { handleSubmit } = useContact();
+  const { control, errors, handleSubmit, register } = useContact();
 
   return (
     <section className="flex justify-center items-center my-20" id="contact">
@@ -28,21 +31,30 @@ const Contact = () => {
             className="flex flex-col w-full bg-[#f9f5f5] p-5 rounded-md md:w-[80%] gap-4 "
             onSubmit={handleSubmit}
           >
-            <input
+            <Input
               type="text"
               placeholder="Nome"
               className="outline-none placeholder:text-slate-950 bg-white p-2 rounded-md"
+              error={errors.name?.message}
+              {...register("name")}
             />
-            <input
+            <Input
               type="email"
               placeholder="E-mail"
-              className="outline-none placeholder:text-slate-950 bg-white p-2 rounded-md"
+              className="outline-none placeholder:text-slate-950 bg-white p-2 rounded-md "
+              error={errors.email?.message}
+              {...register("email")}
             />
-
-            <textarea
-              rows={3}
-              placeholder="Escreva sua mensagem"
-              className="outline-none placeholder:text-slate-950 resize-none bg-white p-2 rounded-md"
+            <Controller
+              control={control}
+              name="message"
+              render={({ field: { onChange, value } }) => (
+                <Textarea
+                  onChange={onChange}
+                  value={value}
+                  error={errors.message ? errors.message.message : undefined}
+                />
+              )}
             />
 
             <button
