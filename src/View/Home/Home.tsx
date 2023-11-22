@@ -15,9 +15,11 @@ const Home = () => {
             <TyppingEffect text="Full Stack Developer" />
 
             <div className="mt-4">
-              <button className="text-[1.2rem] bg-blue-600 text-fuchsia-50 rounded-[12px] p-3">
-                Precisando de um Desenvolvedor?
-              </button>
+              <a href="#contact">
+                <button className="text-[1.2rem] bg-blue-600 text-fuchsia-50 rounded-[12px] p-3">
+                  Precisando de um Desenvolvedor?
+                </button>
+              </a>
             </div>
           </div>
         </div>
