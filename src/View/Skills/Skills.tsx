@@ -45,8 +45,10 @@ const Skills = () => {
               </p>
             </div>
           ) : (
-            <div className="flex justify-center items-center w-[50%]">
-              <p className="text-base"></p>{" "}
+            <div className="flex justify-center items-center ">
+              <p className="text-base">
+                Clique em algum icone para ver mais informações
+              </p>{" "}
             </div>
           )}
         </section>

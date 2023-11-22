@@ -1,4 +1,4 @@
-const baseUrl = "https://skillicons.dev/icons";
+export const baseUrl = "https://skillicons.dev/icons";
 
 export const skillsIcon = [
   {

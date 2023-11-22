@@ -19,19 +19,17 @@ const Modal = ({
   children,
   onClose,
 }: ModalProps) => (
-  <Dialog.Root open={open}>
+  <Dialog.Root open={open} onOpenChange={onClose}>
     <Dialog.Portal>
-      <Dialog.Overlay className={cn("fixed inset-0 ", classNameOverlay)} />
+      <Dialog.Overlay className={cn("fixed inset-0  z-51", classNameOverlay)} />
       <Dialog.Content className={classNameContent}>
-        <Dialog.Close asChild>
-          <button
-            className="absolute right-4 top-4"
-            aria-label="Close"
-            onClick={onClose}
-          >
-            <Cross2Icon className="h-7 w-7" />
-          </button>
-        </Dialog.Close>
+        <button
+          className="absolute right-4 top-4"
+          aria-label="Close"
+          onClick={onClose}
+        >
+          <Cross2Icon className="h-7 w-7" />
+        </button>
 
         {children}
       </Dialog.Content>
