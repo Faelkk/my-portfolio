@@ -5,6 +5,7 @@ import About from "./View/About/About";
 import Skills from "./View/Skills/Skills";
 import Projects from "./View/Projects/Projects";
 import Contact from "./View/Contact/Contact";
+import ButtonScrollTop from "./View/BtnTop/Button";
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
       <Skills />
       <Projects />
       <Contact />
+      <ButtonScrollTop />
       <Footer />
     </>
   );

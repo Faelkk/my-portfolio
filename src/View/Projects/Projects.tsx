@@ -25,9 +25,6 @@ const Projects = () => {
 
   const handleClickProject = (project: Project | null) => {
     setProjectModal(project);
-    console.log(project);
-    console.log(projectModal);
-
     handleOpenModal();
   };
 
@@ -43,7 +40,7 @@ const Projects = () => {
           <section className="flex flex-wrap  max-w-[1000px] justify-center gap-4 ">
             {projects.map((project) => (
               <div
-                className="bg-blue-600 h-72 w-44 rounded-lg flex flex-col justify-between items-center py-6 hover:border hover:border-blue-900 cursor-pointer md:h-80 md:w-48"
+                className="bg-blue-600 h-72 w-44 rounded-lg flex flex-col justify-between items-center py-6 hover:border hover:border-blue-900 cursor-pointer md:h-80 md:w-48 bg-img"
                 key={project.name}
                 onClick={() => handleClickProject(project)}
               >
