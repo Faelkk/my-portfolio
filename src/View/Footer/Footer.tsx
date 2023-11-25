@@ -1,5 +1,5 @@
 import { GitHubLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
-import logoIcon from "../../assets/android-chrome-512x512_1.svg";
+import logoIcon from "../../assets/icons/android-chrome-512x512_1.svg";
 
 const Footer = () => {
   return (

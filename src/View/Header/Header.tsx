@@ -1,11 +1,10 @@
 import { useWindowWidth } from "../../App/hooks/useWindowWidth";
 
-import logoIcon from "../../assets/android-chrome-512x512_1.svg";
-import NavigationHeader from "./Components/NavigationHeader/NavigationHeader";
-import { HamburgerMenuIcon } from "@radix-ui/react-icons";
-
+import logoIcon from "../../assets/icons/android-chrome-512x512_1.svg";
 import Modal from "../Components/Modal/Modal";
 import useModal from "../Components/Modal/useModal";
+import NavigationHeader from "./Components/NavigationHeader/NavigationHeader";
+import { HamburgerMenuIcon } from "@radix-ui/react-icons";
 
 const Header = () => {
   const { isVisibleModal, handleOpenModal, handleCloseModal } = useModal();

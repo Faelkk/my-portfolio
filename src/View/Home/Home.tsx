@@ -1,5 +1,5 @@
 import TyppingEffect from "./components/TyppingEffect";
-import homeImage from "../../assets/Coding-bro.svg";
+import homeImage from "../../assets/defaults/Coding-bro.svg";
 
 const Home = () => {
   return (

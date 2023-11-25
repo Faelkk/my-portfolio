@@ -24,7 +24,7 @@ const Modal = ({
       <Dialog.Overlay className={cn("fixed inset-0  z-51", classNameOverlay)} />
       <Dialog.Content className={classNameContent}>
         <button
-          className="absolute right-4 top-4"
+          className="absolute right-0 top-0 "
           aria-label="Close"
           onClick={onClose}
         >

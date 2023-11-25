@@ -1,4 +1,4 @@
-import imgCoding from "../../assets/Hand coding-bro.svg";
+import imgCoding from "../../assets/defaults/Hand coding-bro.svg";
 
 const About = () => {
   return (

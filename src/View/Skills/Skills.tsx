@@ -1,4 +1,4 @@
-import { skillsIcon } from "../../App/mocks/images";
+import { skillsIcon } from "../../App/mocks/cardMock";
 import useStatusStore from "../../App/store/store";
 
 const Skills = () => {
