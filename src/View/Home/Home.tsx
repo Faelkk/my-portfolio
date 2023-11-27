@@ -10,7 +10,12 @@ const Home = () => {
             <span className="text-[1.2rem] md:text-4xl font-bold">
               Olá, eu sou o
             </span>
-            <h2 className="text-3xl font-bold md:text-7xl">Rafael.</h2>
+            <h2 className="text-3xl font-bold md:text-7xl">
+              <a href="https://github.com/Faelkk" target="_blank">
+                {" "}
+                Rafael.
+              </a>
+            </h2>
 
             <TyppingEffect text="Full Stack Developer" />
 

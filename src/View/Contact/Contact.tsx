@@ -4,6 +4,8 @@ import Input from "../Components/Input/Input";
 import Textarea from "../Components/Textarea/Textarea";
 import { Controller } from "react-hook-form";
 
+import emailIcon from "../../assets/icons/gmail-svgrepo-com.svg";
+
 const Contact = () => {
   const { control, errors, handleSubmit, register, formRef } = useContact();
 
@@ -21,8 +23,20 @@ const Contact = () => {
           </p>
 
           <div className="flex gap-2">
-            <GitHubLogoIcon className="w-8 h-8" />
-            <LinkedInLogoIcon className="w-8 h-8" />
+            <a href="https://github.com/Faelkk" target="_blank">
+              <GitHubLogoIcon className="w-8 h-8" />
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/rafael-achtenberg-7a4b12284/"
+              target="_blank"
+            >
+              <LinkedInLogoIcon className="w-8 h-8" />
+            </a>
+
+            <a href="mailto:achtenberg.rafa@gmail.com" target="_blank">
+              <img src={emailIcon} alt="Email" className="h-8 w-8" />
+            </a>
           </div>
         </div>
 
