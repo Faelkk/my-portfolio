@@ -51,6 +51,7 @@ const Contact = () => {
               name="message"
               render={({ field: { onChange, value } }) => (
                 <Textarea
+                  name="message"
                   onChange={onChange}
                   value={value}
                   error={errors.message ? errors.message.message : undefined}

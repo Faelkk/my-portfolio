@@ -5,14 +5,16 @@ import { cn } from "../../../App/utils/cn";
 interface TextAreaProps {
   error: string | undefined;
   value?: string;
+  name: string;
   onChange?(event: React.ChangeEvent<HTMLTextAreaElement>): void;
 }
 
 const Textarea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
-  ({ error, value, onChange }, ref) => {
+  ({ error, value, name, onChange }, ref) => {
     return (
       <div className="relative">
         <textarea
+          name={name}
           value={value}
           onChange={(event) => onChange && onChange(event)}
           ref={ref}
