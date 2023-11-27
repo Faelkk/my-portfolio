@@ -5,7 +5,7 @@ import Textarea from "../Components/Textarea/Textarea";
 import { Controller } from "react-hook-form";
 
 const Contact = () => {
-  const { control, errors, handleSubmit, register } = useContact();
+  const { control, errors, handleSubmit, register, formRef } = useContact();
 
   return (
     <section className="flex justify-center items-center my-20" id="contact">
@@ -28,6 +28,7 @@ const Contact = () => {
 
         <div className="flex justify-center ">
           <form
+            ref={formRef}
             className="flex flex-col w-full bg-[#f9f5f5] p-5 rounded-md md:w-[80%] gap-4 "
             onSubmit={handleSubmit}
           >
@@ -35,15 +36,15 @@ const Contact = () => {
               type="text"
               placeholder="Nome"
               className="outline-none placeholder:text-slate-950 bg-white p-2 rounded-md"
-              error={errors.name?.message}
-              {...register("name")}
+              error={errors.user_name?.message}
+              {...register("user_name")}
             />
             <Input
               type="email"
               placeholder="E-mail"
               className="outline-none placeholder:text-slate-950 bg-white p-2 rounded-md "
-              error={errors.email?.message}
-              {...register("email")}
+              error={errors.user_email?.message}
+              {...register("user_email")}
             />
             <Controller
               control={control}

@@ -37,7 +37,7 @@ const Skills = () => {
                     ?.name
                 }
               </h2>
-              <p className="text-blue-800">
+              <p className="text-blue-800 text-sm">
                 {
                   skillsIcon.find((skill) => skill.name === status.skillId)
                     ?.description
@@ -46,7 +46,7 @@ const Skills = () => {
             </div>
           ) : (
             <div className="flex justify-center items-center ">
-              <p className="text-base">
+              <p className="text-sm xl:text-base">
                 Clique em algum icone para ver mais informações
               </p>{" "}
             </div>
