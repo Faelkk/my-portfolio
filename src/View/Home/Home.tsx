@@ -1,17 +1,22 @@
 import TyppingEffect from "./components/TyppingEffect";
 import homeImage from "../../assets/defaults/Coding-bro.svg";
+import Container from "../Components/Container/Container";
 
 const Home = () => {
   return (
-    <main className="flex justify-center items-center mt-6" id="inicio">
-      <div className="flex flex-col-reverse items-center w-full md:w-[90%] md:justify-between md:flex-row ">
-        <div className="flex flex-col  md:w-[50%]">
-          <div className="flex flex-col gap-3 w-full items-center  md:items-start">
+    <Container className="mt-6" id="inicio">
+      <section className="flex flex-col-reverse items-center w-full md:w-[90%] md:justify-between md:flex-row ">
+        <main className="flex flex-col  md:w-[50%]">
+          <section className="flex flex-col gap-3 w-full items-center  md:items-start">
             <span className="text-[1.2rem] md:text-4xl font-bold">
               Olá, eu sou o
             </span>
             <h2 className="text-3xl font-bold md:text-7xl">
-              <a href="https://github.com/Faelkk" target="_blank">
+              <a
+                href="https://github.com/Faelkk"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 {" "}
                 Rafael.
               </a>
@@ -26,14 +31,14 @@ const Home = () => {
                 </button>
               </a>
             </div>
-          </div>
-        </div>
+          </section>
+        </main>
 
-        <div className=" w-[80%] md:w-[50%] md:max-w-[50%] ">
+        <figure className=" w-[80%] md:w-[50%] md:max-w-[50%] ">
           <img src={homeImage} className="" alt="Coding bro" />
-        </div>
-      </div>
-    </main>
+        </figure>
+      </section>
+    </Container>
   );
 };
 

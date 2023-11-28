@@ -1,17 +1,19 @@
 import imgCoding from "../../assets/defaults/Hand coding-bro.svg";
+import Container from "../Components/Container/Container";
 
 const About = () => {
   return (
-    <section className="flex  justify-center items-center mt-20 " id="about">
-      <section className="flex  md:justify-between items-center w-[90%] ">
-        <div className="hidden   md:w-[50%] md:max-w-[50%] md:h-full lg:flex   ">
+    <Container className="mt-6" id="about">
+      <section className="flex md:justify-between items-center w-[90%]">
+        <div className="hidden md:w-[50%] md:max-w-[50%] md:h-full lg:flex">
           <img
             src={imgCoding}
             className="lg:w-[400px] 2xl:w-[700px] 2xl:h-[600px]"
+            alt="Imagem de Coding"
           />
         </div>
 
-        <div className="flex flex-col justify-center items-center lg:w-[50%] gap-4 ">
+        <div className="flex flex-col justify-center items-center lg:w-[50%] gap-4">
           <h2 className="font-bold text-4xl mb-10">Sobre mim</h2>
 
           <p className="2xl:text-[1.4rem]">
@@ -39,7 +41,7 @@ const About = () => {
           </p>
         </div>
       </section>
-    </section>
+    </Container>
   );
 };
 
