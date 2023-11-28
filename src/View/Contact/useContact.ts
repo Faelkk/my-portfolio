@@ -3,6 +3,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import emailjs from "@emailjs/browser";
 import { z } from "zod";
 import { useRef } from "react";
+import toast from "react-hot-toast";
 
 const schema = z.object({
   user_name: z.string().nonempty("Nome é obrigatório"),
@@ -20,6 +21,7 @@ const useContact = () => {
     register,
     handleSubmit: hookFormSubmit,
     formState: { errors },
+    reset,
   } = useForm<FormData>({
     resolver: zodResolver(schema),
   });
@@ -29,18 +31,19 @@ const useContact = () => {
       if (formRef.current) {
         console.log(formRef.current);
 
-        const result = await emailjs.sendForm(
+        await emailjs.sendForm(
           "achfaelMessage",
           "template_y1py0zq",
           formRef.current,
           "_FXMz8RtEJZw6v39w"
         );
 
-        console.log(result.text);
+        toast.success("Email enviado com sucesso");
       }
     } catch (e) {
-      console.log(e);
+      toast.error("Erro ao enviar email");
     }
+    reset();
   };
 
   return {

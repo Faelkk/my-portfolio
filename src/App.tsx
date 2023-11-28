@@ -6,6 +6,7 @@ import Skills from "./View/Skills/Skills";
 import Projects from "./View/Projects/Projects";
 import Contact from "./View/Contact/Contact";
 import ButtonScrollTop from "./View/BtnTop/Button";
+import { Toaster } from "react-hot-toast";
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
       <Contact />
       <ButtonScrollTop />
       <Footer />
+      <Toaster position="top-center" />
     </>
   );
 };

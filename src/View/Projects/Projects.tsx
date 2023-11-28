@@ -1,6 +1,6 @@
 import Modal from "../Components/Modal/Modal";
 import useModal from "../Components/Modal/useModal";
-import ImageDefaultModal from "./components/ImageDefaultModal/ImageDefaultModal";
+import ImageDefaultModal from "./ImageDefaultModal/ImageDefaultModal";
 
 import { projects } from "../../App/mocks/projects";
 
