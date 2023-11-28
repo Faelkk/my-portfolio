@@ -1,8 +1,8 @@
-import useModal from "../Components/Modal/useModal";
 import { projects } from "../../App/mocks/projects";
 import useProject from "./useProject";
 import ModalProjects from "./components/ModalProjects/ModalProjects";
 import Container from "../Components/Container/Container";
+import useModal from "../Components/Modal/useModal";
 
 const Projects = () => {
   const { isVisibleModal, handleOpenModal, handleCloseModal } = useModal();
