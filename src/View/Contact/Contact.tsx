@@ -10,34 +10,36 @@ const Contact = () => {
   const { control, errors, handleSubmit, register, formRef } = useContact();
 
   return (
-    <section className="flex justify-center items-center my-20" id="contact">
+    <main className="flex justify-center items-center my-20" id="contact">
       <section className="grid  md:grid-cols-2 w-[90%] gap-5">
         <div className="flex flex-col gap-5 bg-[#eee] rounded-md p-5">
-          <h2 className="font-bold text-3xl">Entre em contato Comigo</h2>
+          <h2 className="font-bold text-4xl mb-6">Entre em contato Comigo</h2>
 
-          <p>
-            Procurando por um desenvolvedor ou gostaria de compartilhar seu
-            feedback? Fique à vontade para entrar em contato comigo! Estou
-            empolgado para responder e ajudar o mais rápido possível. Utilize
-            qualquer um dos métodos abaixo para se conectar comigo.
-          </p>
+          <section className="flex flex-col  justify-between gap-6 flex-1">
+            <p className="text-md">
+              Procurando por um desenvolvedor ou gostaria de compartilhar seu
+              feedback? Fique à vontade para entrar em contato comigo! Estou
+              empolgado para responder e ajudar o mais rápido possível. Utilize
+              qualquer um dos métodos abaixo para se conectar comigo.
+            </p>
 
-          <div className="flex gap-2">
-            <a href="https://github.com/Faelkk" target="_blank">
-              <GitHubLogoIcon className="w-8 h-8" />
-            </a>
+            <div className="flex gap-2">
+              <a href="https://github.com/Faelkk" target="_blank">
+                <GitHubLogoIcon className="w-8 h-8" />
+              </a>
 
-            <a
-              href="https://www.linkedin.com/in/rafael-achtenberg-7a4b12284/"
-              target="_blank"
-            >
-              <LinkedInLogoIcon className="w-8 h-8" />
-            </a>
+              <a
+                href="https://www.linkedin.com/in/rafael-achtenberg-7a4b12284/"
+                target="_blank"
+              >
+                <LinkedInLogoIcon className="w-8 h-8" />
+              </a>
 
-            <a href="mailto:achtenberg.rafa@gmail.com" target="_blank">
-              <img src={emailIcon} alt="Email" className="h-8 w-8" />
-            </a>
-          </div>
+              <a href="mailto:achtenberg.rafa@gmail.com" target="_blank">
+                <img src={emailIcon} alt="Email" className="h-8 w-8" />
+              </a>
+            </div>
+          </section>
         </div>
 
         <div className="flex justify-center ">
@@ -82,7 +84,7 @@ const Contact = () => {
           </form>
         </div>
       </section>
-    </section>
+    </main>
   );
 };
 

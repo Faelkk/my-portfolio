@@ -6,11 +6,13 @@ export default {
     extend: {
       animation: {
         "animate-skeleton": "1.5s infinite linear",
+        slideDownAndFade: "slideDownAndFade .5s cubic-bezier(0.16, 1, 0.3, 1)",
 
         overlayShow: "overlayShow .5s cubic-bezier(0.16, 1, 0.3, 1)",
         contentShow: "contentShow .5s cubic-bezier(0.16, 1, 0.3, 1)",
       },
       screens: {
+        mini: "390px",
         sm: "430px",
         "2md": "800px",
         "3xl": "1900px",
@@ -51,6 +53,10 @@ export default {
           to: {
             backgroundPosition: "-200%",
           },
+        },
+        slideDownAndFade: {
+          from: { opacity: 0, transform: "translateY(-50%)" },
+          to: { opacity: 1, transform: "translateY(0)" },
         },
 
         overlayShow: {

@@ -22,17 +22,9 @@ const Modal = ({
   <Dialog.Root open={open} onOpenChange={onClose}>
     <Dialog.Portal>
       <Dialog.Overlay
-        className={cn(
-          "fixed inset-0  z-51    data-[state=open]:animate-overlayShow",
-          classNameOverlay
-        )}
+        className={cn("fixed inset-0  z-51   ", classNameOverlay)}
       />
-      <Dialog.Content
-        className={cn(
-          " data-[state=open]:animate-contentShow",
-          classNameContent
-        )}
-      >
+      <Dialog.Content className={cn(classNameContent)}>
         <button
           className="absolute right-0 top-0 outline-none "
           aria-label="Close"

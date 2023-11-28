@@ -19,7 +19,7 @@ const Projects = () => {
         <section className="flex flex-col items-center w-full">
           <h2 className="font-bold text-4xl mb-10">Meus projetos</h2>
 
-          <section className="grid grid-cols-2 2md:grid-cols-3 lg:grid-cols-4  3xl:grid-flow-col justify-center gap-4 ">
+          <section className="grid grid-cols-1 mini:grid-cols-2 2md:grid-cols-3 lg:grid-cols-4  3xl:grid-flow-col justify-center gap-4 ">
             {projects.map((project) => (
               <div
                 className="bg-blue-700 h-72 w-44 rounded-lg flex flex-col justify-between items-center py-6 hover:border hover:border-blue-900 cursor-pointer md:h-80 md:w-48 bg-img"
@@ -48,8 +48,8 @@ const Projects = () => {
         <Modal
           onClose={handleCloseModal}
           open={isVisibleModal}
-          classNameOverlay="backdrop-blur-sm"
-          classNameContent="bg-slate-100 flex  w-[90%] h-[90%]  overflow-auto md:overflow-hidden  flex-col md:flex-row items-center md:max-w-[1100px] md:w-[90%] md:h-auto fixed top-[50%] left-[50%]  translate-x-[-50%] translate-y-[-50%] rounded-[6px] bg-slate-100 p-[25px] shadow-[hsl(206_22%_7%_/_35%)_0px_10px_38px_-10px,_hsl(206_22%_7%_/_20%)_0px_10px_20px_-15px] focus:outline-none"
+          classNameOverlay="backdrop-blur-sm  data-[state=open]:animate-overlayShow"
+          classNameContent="bg-slate-100 flex  w-[90%] h-[90%]  overflow-auto md:overflow-hidden  flex-col md:flex-row items-center md:max-w-[1100px] md:w-[90%] md:h-auto fixed top-[50%] left-[50%]  translate-x-[-50%] translate-y-[-50%] rounded-[6px] bg-slate-100 p-[25px] shadow-[hsl(206_22%_7%_/_35%)_0px_10px_38px_-10px,_hsl(206_22%_7%_/_20%)_0px_10px_20px_-15px] focus:outline-none    data-[state=open]:animate-contentShow"
         >
           <section className="flex items-strech h-[100%] max-h-[500px] gap-4 flex-col md:flex-row  ">
             <section className="flex p-5 rounded-md md:h-full flex-col items-center justify-center bg-[#e2e8f0] md:pb-3 md:px-0 md:pt-0 ">
