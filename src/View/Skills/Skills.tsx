@@ -26,7 +26,7 @@ const Skills = () => {
                       onClick={() => handleIconClick(skill.name)}
                       src={skill.url}
                       alt={`${skill.name} icon`}
-                      className="h-16 w:-16 2xl:h-20 2xl:w-20 cursor-pointer"
+                      className="h-16 w:-16 2xl:h-20 2xl:w-20 cursor-pointer hover:scale-110 transition"
                     />
                   </li>
                 ))}

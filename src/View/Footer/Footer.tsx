@@ -19,11 +19,16 @@ const Footer = () => {
         </a>
 
         <div className="flex mr-4 gap-4">
-          <a href="https://github.com/Faelkk" target="_blank">
-            <GitHubLogoIcon className="w-7 h-7" />
+          <a
+            href="https://github.com/Faelkk"
+            className="hover:scale-105 transition"
+            target="_blank"
+          >
+            <GitHubLogoIcon className="w-7 h-7 " />
           </a>
 
           <a
+            className="hover:scale-105 transition"
             href="https://www.linkedin.com/in/rafael-achtenberg-7a4b12284/"
             target="_blank"
           >

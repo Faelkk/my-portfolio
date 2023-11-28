@@ -21,8 +21,8 @@ const Projects = () => {
 
           <section className="grid grid-cols-1 mini:grid-cols-2 2md:grid-cols-3 lg:grid-cols-4  3xl:grid-flow-col justify-center gap-4 ">
             {projects.map((project) => (
-              <div
-                className="bg-blue-700 h-72 w-44 rounded-lg flex flex-col justify-between items-center py-6 hover:border hover:border-blue-900 cursor-pointer md:h-80 md:w-48 bg-img"
+              <section
+                className="bg-blue-700 h-72 w-44 rounded-lg flex flex-col justify-between items-center py-6 hover:border hover:border-blue-900 cursor-pointer md:h-80 md:w-48 bg-img hover:scale-105 transition"
                 key={project.name}
                 onClick={() => handleClickProject(project)}
               >
@@ -38,7 +38,7 @@ const Projects = () => {
                 <button className="bg-slate-50 w-28 py-1 rounded-lg text-blue-950 font-semibold">
                   Ver mais
                 </button>
-              </div>
+              </section>
             ))}
           </section>
         </section>
@@ -49,14 +49,14 @@ const Projects = () => {
           onClose={handleCloseModal}
           open={isVisibleModal}
           classNameOverlay="backdrop-blur-sm  data-[state=open]:animate-overlayShow"
-          classNameContent="bg-slate-100 flex  w-[90%] h-[90%]  overflow-auto md:overflow-hidden  flex-col md:flex-row items-center md:max-w-[1100px] md:w-[90%] md:h-auto fixed top-[50%] left-[50%]  translate-x-[-50%] translate-y-[-50%] rounded-[6px] bg-slate-100 p-[25px] shadow-[hsl(206_22%_7%_/_35%)_0px_10px_38px_-10px,_hsl(206_22%_7%_/_20%)_0px_10px_20px_-15px] focus:outline-none     "
+          classNameContent="bg-slate-100 flex  w-[90%] h-[90%]  overflow-auto md:overflow-hidden  flex-col md:flex-row items-center md:max-w-[1100px] md:w-[90%] md:h-auto fixed top-[50%] left-[50%]  translate-x-[-50%] translate-y-[-50%] rounded-[6px] bg-slate-100 p-[25px] shadow-[hsl(206_22%_7%_/_35%)_0px_10px_38px_-10px,_hsl(206_22%_7%_/_20%)_0px_10px_20px_-15px] focus:outline-none   data-[state=open]:animate-contentShow"
         >
           <section className="flex items-strech h-[100%] max-h-[500px] gap-4 flex-col md:flex-row  ">
             <section className="flex p-5 rounded-md md:h-full flex-col items-center justify-center bg-[#e2e8f0] md:pb-3 md:px-0 md:pt-0 ">
               <section className="w-full md:h-96 md:w-60 flex  justify-center ">
                 <img
                   src={projectModal.cardImage}
-                  className=" h-[84px] w-[70%] md:h-full object-contain"
+                  className=" h-[84px] w-[70%] md:h-full object-contain hover:scale-110 transition"
                 />
               </section>
 
@@ -83,7 +83,7 @@ const Projects = () => {
               >
                 <figure className="h-full  w-full rounded-lg transition-all ease-in   ">
                   <ImageDefaultModal
-                    className="max-w-full opacity-0 transition duration-200 w-full  max-h-[18.75rem] rounded-sm object-cover object-left"
+                    className="max-w-full opacity-0 transition duration-200 w-full  max-h-[18.75rem] rounded-sm object-cover object-left "
                     src={projectModal.defaultImage}
                     alt={projectModal.name}
                   />
@@ -101,7 +101,7 @@ const Projects = () => {
                       <img
                         key={technology.url}
                         src={technology.url}
-                        className="h-8 w-8"
+                        className="h-8 w-8 hover:scale-110 transition"
                       />
                     ))}
                 </section>

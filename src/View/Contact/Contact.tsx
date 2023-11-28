@@ -23,19 +23,28 @@ const Contact = () => {
               qualquer um dos métodos abaixo para se conectar comigo.
             </p>
 
-            <div className="flex gap-2">
-              <a href="https://github.com/Faelkk" target="_blank">
+            <div className="flex gap-4">
+              <a
+                href="https://github.com/Faelkk"
+                target="_blank"
+                className="hover:scale-105 transition"
+              >
                 <GitHubLogoIcon className="w-8 h-8" />
               </a>
 
               <a
+                className="hover:scale-105 transition"
                 href="https://www.linkedin.com/in/rafael-achtenberg-7a4b12284/"
                 target="_blank"
               >
                 <LinkedInLogoIcon className="w-8 h-8" />
               </a>
 
-              <a href="mailto:achtenberg.rafa@gmail.com" target="_blank">
+              <a
+                href="mailto:achtenberg.rafa@gmail.com"
+                target="_blank"
+                className="hover:scale-105 transition"
+              >
                 <img src={emailIcon} alt="Email" className="h-8 w-8" />
               </a>
             </div>
