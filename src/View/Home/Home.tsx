@@ -26,7 +26,7 @@ const Home = () => {
 
             <div className="mt-4">
               <a href="#contact">
-                <button className="text-[1.2rem] bg-blue-600 text-fuchsia-50 rounded-[12px] p-3">
+                <button className="text-[1.2rem] bg-blue-600 text-fuchsia-50 rounded-[12px] p-3 hover:bg-blue-500 transition-colors">
                   Precisando de um Desenvolvedor?
                 </button>
               </a>

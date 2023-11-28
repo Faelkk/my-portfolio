@@ -4,6 +4,9 @@ export default {
 
   theme: {
     extend: {
+      fontFamily: {
+        sans: ["Roboto", "sans-serif"],
+      },
       animation: {
         "animate-skeleton": "1.5s infinite linear",
         slideDownAndFade: "slideDownAndFade .5s cubic-bezier(0.16, 1, 0.3, 1)",
@@ -15,6 +18,7 @@ export default {
       screens: {
         mini: "390px",
         sm: "430px",
+
         "2md": "800px",
         "3xl": "1900px",
       },
@@ -77,6 +81,9 @@ export default {
             opacity: 1,
             transform: "translate(-50%, -50%) scale(1)",
           },
+        },
+        fontFamily: {
+          sans: ["DM Sans", "sans-serif"],
         },
       },
     },
