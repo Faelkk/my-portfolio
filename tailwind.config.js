@@ -7,7 +7,8 @@ export default {
       animation: {
         "animate-skeleton": "1.5s infinite linear",
         slideDownAndFade: "slideDownAndFade .5s cubic-bezier(0.16, 1, 0.3, 1)",
-
+        slideSideLeftAndFade:
+          "slideSideLeftAndFade .5s cubic-bezier(0.16, 1, 0.3, 1)",
         overlayShow: "overlayShow .5s cubic-bezier(0.16, 1, 0.3, 1)",
         contentShow: "contentShow .5s cubic-bezier(0.16, 1, 0.3, 1)",
       },
@@ -57,6 +58,10 @@ export default {
         slideDownAndFade: {
           from: { opacity: 0, transform: "translateY(-50%)" },
           to: { opacity: 1, transform: "translateY(0)" },
+        },
+        slideSideLeftAndFade: {
+          from: { opacity: 0, transform: "translateX(-5%)" },
+          to: { opacity: 1, transform: "translateX(0)" },
         },
 
         overlayShow: {

@@ -1,8 +1,15 @@
 import { skillsIcon } from "../../App/mocks/cardMock";
 import useStatusStore from "../../App/store/store";
+import { cn } from "../../App/utils/cn";
+import { useSkills } from "./useSkills";
 
 const Skills = () => {
   const { setStatus, status } = useStatusStore();
+
+  const { handleIconClick, shouldAnimate } = useSkills({
+    setStatus,
+    status,
+  });
 
   return (
     <section className="mt-20 flex justify-center" id="skills">
@@ -16,7 +23,7 @@ const Skills = () => {
                 {skillsIcon.map((skill) => (
                   <li key={skill.name}>
                     <img
-                      onClick={() => setStatus(skill.name)}
+                      onClick={() => handleIconClick(skill.name)}
                       src={skill.url}
                       alt={`${skill.name} icon`}
                       className="h-16 w:-16 2xl:h-20 2xl:w-20 cursor-pointer"
@@ -30,7 +37,12 @@ const Skills = () => {
 
         <section className="flex w-full min-h-[20rem] text-[1.1rem] items-center bg-[#eee] rounded-lg 2xl:text-[1.4rem] justify-center  md:w-[50%]">
           {status.isHovered ? (
-            <div className="flex flex-col justify-center w-[80%]">
+            <div
+              className={cn(
+                "flex flex-col justify-center w-[80%] ",
+                shouldAnimate ? "animate-slideSideLeftAndFade" : ""
+              )}
+            >
               <h2 className="text-xl capitalize mb-2  text-blue-900 font-bold">
                 {
                   skillsIcon.find((skill) => skill.name === status.skillId)
@@ -47,7 +59,7 @@ const Skills = () => {
           ) : (
             <div className="flex justify-center items-center ">
               <p className="text-sm xl:text-base">
-                Clique em algum icone para ver mais informações
+                Clique em algum ícone para ver mais informações
               </p>{" "}
             </div>
           )}
