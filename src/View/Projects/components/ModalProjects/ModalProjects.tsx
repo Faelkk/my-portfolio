@@ -1,3 +1,4 @@
+import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import Modal from "../../../Components/Modal/Modal";
 import ImageDefaultModal from "../ImageDefaultModal/ImageDefaultModal";
 
@@ -13,10 +14,11 @@ interface ProjectType {
   url: string;
   defaultImage: string;
   description: string;
-  technologies: Tecnology[];
+  technologies: Technology[];
+  urlGithub: string;
 }
 
-interface Tecnology {
+interface Technology {
   name: string;
   url: string;
 }
@@ -86,6 +88,12 @@ const ModalProjects = ({
                         />
                       ))}
                   </section>
+
+                  <button className="absolute right-0 ">
+                    <a href={projectModal.urlGithub} target="_blank">
+                      <GitHubLogoIcon className="w-8 h-8" />
+                    </a>
+                  </button>
                 </section>
               </div>
             </section>
