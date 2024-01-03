@@ -21,10 +21,17 @@ export default {
 
       },
       screens: {
+      minilg: '200px',
+        minism: '300px',
         mini: "390px",
         sm: "430px",
-
+        '2sm': '600px',
+        
+        minimum: '1000px',
+        medium: '1400px',
+        large: '1700px',
         "2md": "800px",
+        
         "3xl": "1900px",
       },
       colors: {

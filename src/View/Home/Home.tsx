@@ -9,7 +9,7 @@ const Home = () => {
 
   return (
     <Container className="mt-6" id="inicio">
-      <section className="flex flex-col-reverse items-center w-full md:w-[90%] md:justify-between md:flex-row " ref={elementRef}>
+      <section className="flex flex-col-reverse items-center w-full md:w-[90%] md:justify-between md:flex-row  " ref={elementRef}>
         <main className={cn('flex flex-col  md:w-[50%] ', isVisible ? 'animate-startSlideLeft' : '' )}>
           <section className="flex flex-col gap-3 w-full items-center  md:items-start">
             <span className="text-[1.2rem] md:text-4xl font-bold">
@@ -38,8 +38,8 @@ const Home = () => {
           </section>
         </main>
 
-        <figure className={cn(' w-[80%] md:w-[50%] md:max-w-[50%]', isVisible ? 'animate-startSlideRight' : '')}>
-          <img src={homeImage} className="" alt="Coding bro" />
+        <figure className={cn(' w-[80%] minilg:h-[200px] minism:h-[330px] mini:h-[430px]  md:h-[450px] 2sm:h-[530px]   md:w-[50%] md:max-w-[50%] minimum:h-[550px]  medium:h-[680px] large:h-[864px]  ', isVisible ? 'animate-startSlideRight' : '')}>
+          <img src={homeImage} className="h-full w-full" alt="Coding bro" />
         </figure>
       </section>
     </Container>
