@@ -6,13 +6,16 @@ import { Controller } from "react-hook-form";
 
 import emailIcon from "../../assets/icons/gmail-svgrepo-com.svg";
 import Container from "../Components/Container/Container";
+import { useIsVisibleItemOnScreen } from "../../App/hooks/useIsVisibleItemOnScreen";
+import { cn } from "../../App/utils/cn";
 
 const Contact = () => {
   const { control, errors, handleSubmit, register, formRef } = useContact();
+  const { isVisible, elementRef } = useIsVisibleItemOnScreen();
 
   return (
     <Container className="my-20" id="contact">
-      <section className="grid md:grid-cols-2 w-[90%] gap-5">
+      <section className={cn('grid md:grid-cols-2 w-[90%] gap-5', isVisible ? 'animate-startSlideRight' : '')} ref={elementRef}>
         <div className="flex flex-col gap-5 bg-[#eee] rounded-md p-5">
           <h2 className="font-bold text-4xl mb-6">Entre em contato Comigo</h2>
 

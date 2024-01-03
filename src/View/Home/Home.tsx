@@ -1,12 +1,16 @@
 import TyppingEffect from "./components/TyppingEffect";
 import homeImage from "../../assets/defaults/Coding-bro.svg";
 import Container from "../Components/Container/Container";
+import { cn } from "../../App/utils/cn";
+import { useIsVisibleItemOnScreen } from "../../App/hooks/useIsVisibleItemOnScreen";
 
 const Home = () => {
+  const { isVisible, elementRef } = useIsVisibleItemOnScreen();
+
   return (
     <Container className="mt-6" id="inicio">
-      <section className="flex flex-col-reverse items-center w-full md:w-[90%] md:justify-between md:flex-row ">
-        <main className="flex flex-col  md:w-[50%]">
+      <section className="flex flex-col-reverse items-center w-full md:w-[90%] md:justify-between md:flex-row " ref={elementRef}>
+        <main className={cn('flex flex-col  md:w-[50%] ', isVisible ? 'animate-startSlideLeft' : '' )}>
           <section className="flex flex-col gap-3 w-full items-center  md:items-start">
             <span className="text-[1.2rem] md:text-4xl font-bold">
               Olá, eu sou o
@@ -34,7 +38,7 @@ const Home = () => {
           </section>
         </main>
 
-        <figure className=" w-[80%] md:w-[50%] md:max-w-[50%] ">
+        <figure className={cn(' w-[80%] md:w-[50%] md:max-w-[50%]', isVisible ? 'animate-startSlideRight' : '')}>
           <img src={homeImage} className="" alt="Coding bro" />
         </figure>
       </section>

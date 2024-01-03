@@ -3,14 +3,17 @@ import useProject from "./useProject";
 import ModalProjects from "./components/ModalProjects/ModalProjects";
 import Container from "../Components/Container/Container";
 import useModal from "../Components/Modal/useModal";
+import { useIsVisibleItemOnScreen } from "../../App/hooks/useIsVisibleItemOnScreen";
+import { cn } from "../../App/utils/cn";
 
 const Projects = () => {
   const { isVisibleModal, handleOpenModal, handleCloseModal } = useModal();
   const { projectModal, handleClickProject } = useProject(handleOpenModal);
+  const { isVisible, elementRef } = useIsVisibleItemOnScreen();
 
   return (
     <Container className="mt-6" id="projects">
-      <section className="flex flex-col items-center w-full">
+      <section className={cn('flex flex-col items-center w-full', isVisible ? 'animate-slideSideLeftAndFade' : '')} ref={elementRef}>
         <h2 className="font-bold text-4xl mb-10">Meus projetos</h2>
 
         <div className="grid grid-cols-1 mini:grid-cols-2 2md:grid-cols-3 lg:grid-cols-4  3xl:grid-flow-col justify-center gap-4 ">

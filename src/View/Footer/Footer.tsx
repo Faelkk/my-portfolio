@@ -1,10 +1,14 @@
 import { GitHubLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
 import logoIcon from "../../assets/icons/android-chrome-512x512_1.svg";
+import { useIsVisibleItemOnScreen } from "../../App/hooks/useIsVisibleItemOnScreen";
+import { cn } from "../../App/utils/cn";
 
 const Footer = () => {
+  const { isVisible, elementRef } = useIsVisibleItemOnScreen();
+
   return (
-    <footer className="flex justify-center  ">
-      <div className="flex justify-between w-[95%] border-t border-700  pt-6 pb-6 ">
+    <footer className="flex justify-center">
+      <div className={cn('flex justify-between w-[95%] border-t border-700  pt-6 pb-6', isVisible ? 'animate-slideSideLeftAndFade' : '')} ref={elementRef} > 
         <a
           href="https://github.com/Faelkk"
           target="_blank"

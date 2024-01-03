@@ -1,3 +1,4 @@
+import { useIsVisibleItemOnScreen } from "../../App/hooks/useIsVisibleItemOnScreen";
 import { skillsIcon } from "../../App/mocks/cardMock";
 import useStatusStore from "../../App/store/store";
 import { cn } from "../../App/utils/cn";
@@ -12,9 +13,11 @@ const Skills = () => {
     status,
   });
 
+  const { isVisible, elementRef } = useIsVisibleItemOnScreen();
+
   return (
     <Container className="mt-20" id="skills">
-      <section className="flex flex-col items-center md:gap-10 md:flex-row w-[90%]">
+      <section className={cn('flex flex-col items-center md:gap-10 md:flex-row w-[90%]', isVisible ? 'animate-slideMinimumDown' : '')} ref={elementRef}>
         <article className="flex md:w-[50%]">
           <div className="flex items-center flex-col">
             <h2 className="font-bold text-4xl mb-10">Minhas habilidades</h2>

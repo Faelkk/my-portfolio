@@ -9,11 +9,16 @@ export default {
       },
       animation: {
         "animate-skeleton": "1.5s infinite linear",
-        slideDownAndFade: "slideDownAndFade .5s cubic-bezier(0.16, 1, 0.3, 1)",
         slideSideLeftAndFade:
           "slideSideLeftAndFade .5s cubic-bezier(0.16, 1, 0.3, 1)",
         overlayShow: "overlayShow .5s cubic-bezier(0.16, 1, 0.3, 1)",
         contentShow: "contentShow .5s cubic-bezier(0.16, 1, 0.3, 1)",
+        startSlideDown: 'startSlideDown .5s',
+        startSlideLeft: 'startSlideLeft .5s',
+        startSlideRight: 'startSlideRight .5s',
+        slideMinimumDown: 'slideMinimumDown .5s',
+        startSlideTop: 'startSlideTop .5s'
+
       },
       screens: {
         mini: "390px",
@@ -59,14 +64,30 @@ export default {
             backgroundPosition: "-200%",
           },
         },
-        slideDownAndFade: {
+      
+        slideSideLeftAndFade: {
+          from: { opacity: 0, transform: "translateX(-15%)" },
+          to: { opacity: 1, transform: "translateX(0)" },
+        },
+
+        startSlideDown: {
           from: { opacity: 0, transform: "translateY(-50%)" },
           to: { opacity: 1, transform: "translateY(0)" },
         },
-        slideSideLeftAndFade: {
-          from: { opacity: 0, transform: "translateX(-5%)" },
+        startSlideRight: {
+          from: { opacity: 0, transform: "translateX(15%)" },
           to: { opacity: 1, transform: "translateX(0)" },
         },
+        startSlideLeft: {
+          from: { opacity: 0, transform: "translateX(-15%)" },
+          to: { opacity: 1, transform: "translateX(0)" },
+        },
+        
+        slideMinimumDown: {
+            from: { opacity: 0, transform: "translateY(-15%)" },
+            to: { opacity: 1, transform: "translateY(0)" },       
+        },
+      
 
         overlayShow: {
           from: { opacity: 0 },

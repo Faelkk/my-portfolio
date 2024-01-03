@@ -1,4 +1,6 @@
+import { useIsVisibleItemOnScreen } from "../../App/hooks/useIsVisibleItemOnScreen";
 import { useWindowWidth } from "../../App/hooks/useWindowWidth";
+import { cn } from "../../App/utils/cn";
 import logoIcon from "../../assets/icons/android-chrome-512x512_1.svg";
 import Modal from "../Components/Modal/Modal";
 import useModal from "../Components/Modal/useModal";
@@ -7,12 +9,13 @@ import NavigationHeader from "./Components/NavigationHeader/NavigationHeader";
 import { HamburgerMenuIcon } from "@radix-ui/react-icons";
 
 const Header = () => {
+  const { isVisible, elementRef } = useIsVisibleItemOnScreen();
   const { isVisibleModal, handleOpenModal, handleCloseModal } = useModal();
   const { width } = useWindowWidth();
 
   return (
-    <header className="flex justify-center">
-      <nav className="flex items-center border-b border-700 justify-between w-[95%] pt-6 pb-6">
+    <header className="flex justify-center ">
+      <nav  ref={elementRef} className={cn('flex items-center border-b border-700 justify-between w-[95%] pt-6 pb-6  ', isVisible ? ' animate-startSlideDown' : '')}>
         <a
           href="https://github.com/Faelkk"
           target="_blank"
@@ -38,7 +41,7 @@ const Header = () => {
             </button>
 
             <Modal
-              classNameContent="fixed top-0 w-full h-[50%] rounded-[6px] bg-slate-100 p-[25px] shadow-[hsl(206_22%_7%_/_35%)_0px_10px_38px_-10px,_hsl(206_22%_7%_/_20%)_0px_10px_20px_-15px] data-[state=open]:animate-slideDownAndFade"
+              classNameContent="fixed top-0 w-full h-[50%] rounded-[6px] bg-slate-100 p-[25px] shadow-[hsl(206_22%_7%_/_35%)_0px_10px_38px_-10px,_hsl(206_22%_7%_/_20%)_0px_10px_20px_-15px] data-[state=open]:animate-startSlideDown"
               open={isVisibleModal}
               onClose={handleCloseModal}
             >

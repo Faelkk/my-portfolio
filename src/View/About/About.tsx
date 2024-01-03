@@ -1,10 +1,14 @@
+import { useIsVisibleItemOnScreen } from "../../App/hooks/useIsVisibleItemOnScreen";
+import { cn } from "../../App/utils/cn";
 import imgCoding from "../../assets/defaults/Hand coding-bro.svg";
 import Container from "../Components/Container/Container";
 
 const About = () => {
+  const { isVisible, elementRef } = useIsVisibleItemOnScreen();
+  
   return (
     <Container className="mt-6" id="about">
-      <section className="flex md:justify-between items-center w-[90%]">
+      <section ref={elementRef} className={cn('flex md:justify-between items-center w-[90%]', isVisible ? 'animate-startSlideRight' : '')}>
         <div className="hidden md:w-[50%] md:max-w-[50%] md:h-full lg:flex">
           <img
             src={imgCoding}
