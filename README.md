@@ -1,6 +1,6 @@
 # My Portifolio
 
-Bem-vindo ao meu portfólio pessoal, uma aplicação web desenvolvida com as seguintes tecnologias React, TypeScript e Vite. Este projeto é uma representação digital das minhas habilidades, projetos e experiências profissionais.
+Bem-vindo ao meu portfólio pessoal, uma aplicação web desenvolvida com as seguintes tecnologias React, TypeScript e Vite. Este projeto é uma representação digital das minhas habilidades, projetos.
 
 ## Layout Web
 
