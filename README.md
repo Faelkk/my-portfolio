@@ -1,27 +1,86 @@
-# React + TypeScript + Vite
+# My Portifolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Bem-vindo ao meu portfólio pessoal, uma aplicação web desenvolvida com as ss seguintes tecnologias React, TypeScript e Vite. Este projeto é uma representação digital das minhas habilidades, projetos e experiências profissionais.
 
-Currently, two official plugins are available:
+## Layout Web
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<img style="width:1920px" src="public/home.png" />
 
-## Expanding the ESLint configuration
+<img style="width:1920px" src="public/about-me.png" />
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+<img style="width:1920px" src="public/skills and projects.png" />
 
-- Configure the top-level `parserOptions` property like this:
+<img style="width:1920px" src="public/contact-me and footer.png" />
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+## Layout Mobile
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+<img style="width:389px;" src="public/home - responsivo.png">
+
+<img style="width:389px;" src="public/modal menu mobile.png">
+
+<img style="width:389px;"  src="public/about-me - responsivo.png">
+
+<img style="width:389px;"  src="public/skills - responsivo.png">
+
+<img style="width:389px;" src="public/projects 1 - responsivo.png">
+
+<img style="width:389px;" src="public/projects 2 - responsivo.png">
+
+<img style="width:389px;" src="public/contact-me and footer responsivo.png">
+
+<br> <!-- Linha vazia para criar um espaçamento -->
+
+## 🛠️ Tecnologias
+
+💻 **Front-end**
+
+- [React](https://react.dev/)
+- [Typescript](https://www.typescriptlang.org)
+- [Vite](https://vitejs.dev/)
+
+📚 **Bibliotecas**
+
+- [clsx](https://www.npmjs.com/package/clsx)
+- [react-typing-effect](https://www.npmjs.com/package/react-typing-effect)
+- [@emailjs/browser](https://www.emailjs.com/docs/sdk/installation/)
+- [react-hook-form](https://react-hook-form.com/)
+- [react-hot-toast](https://react-hot-toast.com/)
+- [radix-ui](https://www.radix-ui.com/)
+- [zustand](https://zustand-demo.pmnd.rs/)
+- [zod](https://zod.dev/)
+
+🎨 **Estilização**
+
+- [tailwindcss](https://tailwindcss.com/docs/installation)
+
+🔋 **Versionamento e Deploy**
+
+- [Git](https://git-scm.com)
+- [Vercel](https://vercel.com/)
+
+⚙️ **Configuranções e Instalações**
+
+Clone do Projeto
+
+    $ git clone https://github.com/Faelkk/my-portfolio
+
+Instalando as dependências
+
+    $ npm install
+
+Iniciando o projeto
+
+    $ npm run dev
+
+<br>
+
+**Como me ajudar nesse projeto?**
+
+- Você ira me ajudar muito me seguindo aqui no GitHub
+- Dando uma estrela no projeto
+- Conectando-se comigo no LinkedIn para fazer parte da minha rede.
+
+<br>
+
+**Feito por**
+[Rafael Achtenberg](linkedin.com/in/rafael-achtenberg-7a4b12284/)
