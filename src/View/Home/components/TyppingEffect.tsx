@@ -1,6 +1,6 @@
 import ReactTypingEffect from "react-typing-effect";
 
-const TyppingEffect = ({ text }: { text: string }) => (
+const TypingEffect = ({ text }: { text: string }) => (
   <ReactTypingEffect
     text={text}
     speed={100}
@@ -11,4 +11,4 @@ const TyppingEffect = ({ text }: { text: string }) => (
   />
 );
 
-export default TyppingEffect;
+export default TypingEffect;

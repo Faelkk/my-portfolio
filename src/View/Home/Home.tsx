@@ -1,4 +1,4 @@
-import TyppingEffect from "./components/TyppingEffect";
+import TypingEffect from "./components/TypingEffect";
 import homeImage from "../../assets/defaults/Coding-bro.svg";
 import Container from "../Components/Container/Container";
 import { cn } from "../../App/utils/cn";
@@ -9,8 +9,16 @@ const Home = () => {
 
   return (
     <Container className="mt-6" id="inicio">
-      <section className="flex flex-col-reverse items-center w-full md:w-[90%] md:justify-between md:flex-row  " ref={elementRef}>
-        <main className={cn('flex flex-col  md:w-[50%] ', isVisible ? 'animate-startSlideLeft' : '' )}>
+      <section
+        className="flex flex-col-reverse items-center w-full md:w-[90%] md:justify-between md:flex-row  "
+        ref={elementRef}
+      >
+        <main
+          className={cn(
+            "flex flex-col  md:w-[50%] ",
+            isVisible ? "animate-startSlideLeft" : ""
+          )}
+        >
           <section className="flex flex-col gap-3 w-full items-center  md:items-start">
             <span className="text-[1.2rem] md:text-4xl font-bold">
               Olá, eu sou o
@@ -26,7 +34,7 @@ const Home = () => {
               </a>
             </h2>
 
-            <TyppingEffect text="Full Stack Developer" />
+            <TypingEffect text="Full Stack Developer" />
 
             <div className="mt-4">
               <a href="#contact">
@@ -38,7 +46,12 @@ const Home = () => {
           </section>
         </main>
 
-        <figure className={cn(' w-[80%] minilg:h-[200px] minism:h-[330px] mini:h-[430px]  md:h-[450px] 2sm:h-[530px]   md:w-[50%] md:max-w-[50%] minimum:h-[550px]  medium:h-[680px] large:h-[864px]  ', isVisible ? 'animate-startSlideRight' : '')}>
+        <figure
+          className={cn(
+            " w-[80%] minilg:h-[200px] minism:h-[330px] mini:h-[430px]  md:h-[450px] 2sm:h-[530px]   md:w-[50%] md:max-w-[50%] minimum:h-[550px]  medium:h-[680px] large:h-[864px]  ",
+            isVisible ? "animate-startSlideRight" : ""
+          )}
+        >
           <img src={homeImage} className="h-full w-full" alt="Coding bro" />
         </figure>
       </section>

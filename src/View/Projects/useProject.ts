@@ -7,6 +7,7 @@ interface Project {
   cardImage: string;
   defaultImage: string;
   technologies: Technologies[];
+  urlGithub: string;
 }
 
 interface Technologies {
