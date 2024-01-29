@@ -29,8 +29,6 @@ const useContact = () => {
   const handleSubmit: SubmitHandler<FormData> = async () => {
     try {
       if (formRef.current) {
-        console.log(formRef.current);
-
         await emailjs.sendForm(
           "achfaelMessage",
           "template_y1py0zq",

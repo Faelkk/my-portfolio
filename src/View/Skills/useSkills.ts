@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useSkills } from "../../App/hooks/useSkill";
 
 interface useSkilsProps {
   setStatus: (skillName: string) => void;
@@ -7,7 +8,9 @@ interface useSkilsProps {
   };
 }
 
-export const useSkills = ({ setStatus, status }: useSkilsProps) => {
+export const useSkillsController = ({ setStatus, status }: useSkilsProps) => {
+  const { skills, isLoading } = useSkills();
+
   const [shouldAnimate, setShouldAnimate] = useState(false);
 
   useEffect(() => {
@@ -27,6 +30,8 @@ export const useSkills = ({ setStatus, status }: useSkilsProps) => {
   };
 
   return {
+    skills,
+    isLoading,
     shouldAnimate,
     handleIconClick,
   };

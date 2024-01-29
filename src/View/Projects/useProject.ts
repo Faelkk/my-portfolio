@@ -1,21 +1,10 @@
 import { useState } from "react";
-
-interface Project {
-  name: string;
-  url: string;
-  description: string;
-  cardImage: string;
-  defaultImage: string;
-  technologies: Technologies[];
-  urlGithub: string;
-}
-
-interface Technologies {
-  name: string;
-  url: string;
-}
+import { useProjects } from "../../App/hooks/useProjects";
+import { Project } from "../../App/entities/Project";
 
 const useProject = (handleOpenModal: () => void) => {
+  const { projects, isLoading } = useProjects();
+
   const [projectModal, setProjectModal] = useState<Project | null>(null);
 
   const handleClickProject = (project: Project | null) => {
@@ -23,7 +12,12 @@ const useProject = (handleOpenModal: () => void) => {
     handleOpenModal();
   };
 
-  return { projectModal, handleClickProject };
+  return {
+    projectModal,
+    projects,
+    isLoading,
+    handleClickProject,
+  };
 };
 
 export default useProject;

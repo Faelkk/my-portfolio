@@ -6,7 +6,7 @@ interface ImageSkeletonProps {
   alt: string;
 }
 
-const ImageDefaultModal = ({ src, alt, className }: ImageSkeletonProps) => {
+const ImageSkeleton = ({ src, alt, className }: ImageSkeletonProps) => {
   const [skeleton, setSkeleton] = useState(true);
 
   function handleLoad({ target }: React.SyntheticEvent<HTMLImageElement>) {
@@ -20,10 +20,11 @@ const ImageDefaultModal = ({ src, alt, className }: ImageSkeletonProps) => {
     <div className="grid">
       {skeleton && (
         <div
-          className="skeleton h-full bg-gradient-to-r from-gray-300 via-white to-gray-300 bg-gray-300 size  animate-skeleton "
+          className="skeleton h-full bg-gradient-to-r from-gray-300 via-white to-gray-300 bg-gray-300 size  animate-pulse transition "
           style={{ backgroundSize: "200%", gridArea: "1/1" }}
         ></div>
       )}
+
       <img
         src={src}
         onLoad={handleLoad}
@@ -35,4 +36,4 @@ const ImageDefaultModal = ({ src, alt, className }: ImageSkeletonProps) => {
   );
 };
 
-export default ImageDefaultModal;
+export default ImageSkeleton;

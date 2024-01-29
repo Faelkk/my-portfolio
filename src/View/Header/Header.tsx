@@ -15,7 +15,13 @@ const Header = () => {
 
   return (
     <header className="flex justify-center ">
-      <nav  ref={elementRef} className={cn('flex items-center border-b border-700 justify-between w-[95%] pt-6 pb-6  ', isVisible ? ' animate-startSlideDown' : '')}>
+      <nav
+        ref={elementRef}
+        className={cn(
+          "flex items-center border-b border-700 justify-between w-[95%] pt-6 pb-6  ",
+          isVisible ? " animate-startSlideDown" : ""
+        )}
+      >
         <a
           href="https://github.com/Faelkk"
           target="_blank"
@@ -33,7 +39,7 @@ const Header = () => {
         </a>
 
         {width >= 768 ? (
-          <NavigationHeader ClassNameUL="flex gap-6 mr-4 2xl:text-[1.3rem]" />
+          <NavigationHeader ClassNameUL="flex gap-6 mr-4 2xl:text-[1.1rem]" />
         ) : (
           <>
             <button onClick={handleOpenModal} aria-label="Open Menu">

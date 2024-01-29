@@ -13,25 +13,25 @@ export default {
           "slideSideLeftAndFade .5s cubic-bezier(0.16, 1, 0.3, 1)",
         overlayShow: "overlayShow .5s cubic-bezier(0.16, 1, 0.3, 1)",
         contentShow: "contentShow .5s cubic-bezier(0.16, 1, 0.3, 1)",
-        startSlideDown: 'startSlideDown .5s',
-        startSlideLeft: 'startSlideLeft .5s',
-        startSlideRight: 'startSlideRight .5s',
-        slideMinimumDown: 'slideMinimumDown .5s',
-        startSlideTop: 'startSlideTop .5s'
-
+        startSlideDown: "startSlideDown .5s",
+        startSlideLeft: "startSlideLeft .5s",
+        startSlideRight: "startSlideRight .5s",
+        slideMinimumDown: "slideMinimumDown .5s",
+        startSlideTop: "startSlideTop .5s",
       },
       screens: {
-      minilg: '200px',
-        minism: '300px',
+        minilg: "200px",
+        minism: "300px",
         mini: "390px",
         sm: "430px",
-        '2sm': '600px',
-        
-        minimum: '1000px',
-        medium: '1400px',
-        large: '1700px',
+        small: "530px",
+        "2sm": "600px",
+
+        minimum: "1000px",
+        medium: "1400px",
+        large: "1700px",
         "2md": "800px",
-        
+
         "3xl": "1900px",
       },
       colors: {
@@ -71,7 +71,7 @@ export default {
             backgroundPosition: "-200%",
           },
         },
-      
+
         slideSideLeftAndFade: {
           from: { opacity: 0, transform: "translateX(-15%)" },
           to: { opacity: 1, transform: "translateX(0)" },
@@ -89,12 +89,11 @@ export default {
           from: { opacity: 0, transform: "translateX(-15%)" },
           to: { opacity: 1, transform: "translateX(0)" },
         },
-        
+
         slideMinimumDown: {
-            from: { opacity: 0, transform: "translateY(-15%)" },
-            to: { opacity: 1, transform: "translateY(0)" },       
+          from: { opacity: 0, transform: "translateY(-15%)" },
+          to: { opacity: 1, transform: "translateY(0)" },
         },
-      
 
         overlayShow: {
           from: { opacity: 0 },
@@ -110,11 +109,8 @@ export default {
             transform: "translate(-50%, -50%) scale(1)",
           },
         },
-        fontFamily: {
-          sans: ["DM Sans", "sans-serif"],
-        },
       },
     },
+    plugins: [],
   },
-  plugins: [],
 };

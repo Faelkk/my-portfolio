@@ -8,19 +8,24 @@ import ButtonScrollTop from "./View/BtnTop/Button";
 import Projects from "./View/Projects/Projects";
 
 import { Toaster } from "react-hot-toast";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 const App = () => {
+  const queryClient = new QueryClient();
+
   return (
     <>
-      <Header />
-      <Home />
-      <About />
-      <Skills />
-      <Projects />
-      <Contact />
-      <ButtonScrollTop />
-      <Footer />
-      <Toaster position="top-center" />
+      <QueryClientProvider client={queryClient}>
+        <Header />
+        <Home />
+        <About />
+        <Skills />
+        <Projects />
+        <Contact />
+        <ButtonScrollTop />
+        <Footer />
+        <Toaster position="top-center" />
+      </QueryClientProvider>
     </>
   );
 };
